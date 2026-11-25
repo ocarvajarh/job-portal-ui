@@ -142,10 +142,15 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Privacy Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip content="We collect only the information you provide, such as your profile and job applications, and use it to power your JobPortal experience. We never sell your personal data.">
+                <a
+                  tabIndex={0}
+                  className="group relative cursor-help hover:text-white focus-visible:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Privacy Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </a>
+              </Tooltip>
               <Tooltip content="By using JobPortal you agree to use the service lawfully, provide accurate information, and respect other users. Employers are responsible for the jobs they post, and we may suspend accounts that violate these terms.">
                 <a
                   tabIndex={0}
